@@ -1,0 +1,131 @@
+.home-section1 {
+	height: 100vh;
+	background-color: #2a00fe1e;
+	.chandeliers {
+		position: absolute;
+		top: 0;
+		left: -100px;
+	}
+
+	h1 {
+		color: $heading-clr;
+		font-size: 3.4375rem;
+		font-weight: bold;
+	}
+	.left-card {
+		p {
+			color: #8492ae;
+		}
+	}
+	.carousel-indicators {
+		[data-bs-target] {
+			width: 10px;
+			height: 10px;
+			transform: rotate(45deg);
+		}
+		button {
+			background-color: transparent;
+			margin-right: 10px;
+			border: 1px solid $accent-clr !important;
+			&.active {
+				background-color: $accent-clr !important;
+			}
+		}
+	}
+
+	.right-card {
+		background-image: url("../../../public/images/Home_img/shape.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		transform: scaleX(-1);
+		.discount {
+			top: 130px;
+			left: 50px;
+			transform: scaleX(-1);
+			&::after {
+				content: "";
+				width: 130px;
+				height: 130px;
+				position: absolute;
+				top: -22rem;
+				left: 27.625rem;
+				background-image: url("../../../public/images/Home_img/Path-16826.png");
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 90%;
+			}
+			&::before {
+				content: "50% \A off";
+				white-space: pre;
+				width: 130px;
+				height: 130px;
+				position: absolute;
+				top: -22rem;
+				left: 28.225rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $primary-clr-light;
+				font-size: $h4;
+				font-weight: bolder;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+@media (max-width: 1700px) {
+	.home-section1 {
+		.chandeliers {
+			display: none !important;
+		}
+	}
+}
+@media (max-width: 1399px) {
+	// or #{$retina}
+	.home-section1 {
+		.chandeliers {
+			display: none;
+		}
+		.right-card {
+			.discount {
+				&::after {
+					width: 110px;
+					height: 110px;
+					top: -19.7rem;
+					left: 23.525rem;
+				}
+				&::before {
+					width: 110px;
+					height: 110px;
+					top: -19.7rem;
+					left: 24rem;
+					font-size: $h5;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1199px) {
+	// or #{$retina}
+	.home-section1 {
+		.right-card {
+			.discount {
+				&::after {
+					width: 95px;
+					height: 95px;
+					top: -17.7rem;
+					left: 20.525rem;
+				}
+				&::before {
+					width: 95px;
+					height: 95px;
+					top: -17.7rem;
+					left: 21rem;
+					font-size: $h6;
+				}
+			}
+		}
+	}
+}
